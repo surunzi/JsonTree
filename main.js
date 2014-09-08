@@ -48,12 +48,14 @@
 
     // 加载数据
     if (localStorage['JsonTree']) {
+        $textarea.val(localStorage['JsonTree']);
         try {
             data = JSON.parse(localStorage['JsonTree']);
             setting = JSON.parse(localStorage['JsonTreeSetting']);
         } catch (e) {}
+    } else {
+        $textarea.val(JSON.stringify(data));
     }
-    $textarea.val(JSON.stringify(data));
     generate();
     // 宽度，高度控制
     var $widthValue = $('#width-value'),
