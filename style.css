@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    background-image: url(bg.gif);
+}
+
+html {
+    height: 100%;
+}
+
+text {
+    font-size: 15px;
+}
+
+textarea {
+    width: 50%;
+    height: calc(100% - 50px);
+    float: left;
+    outline: none;
+    padding: 10px;
+    background-image: url(bg.gif);
+}
+
+.node circle {
+    fill: #fff;
+    stroke: #262e46;
+    stroke-width: 2px;
+}
+
+.node {
+    font: 10px sans-serif;
+}
+
+.link {
+    fill: none;
+    stroke: #ccc;
+    stroke-width: 4px;
+}
+
+.link:hover {
+    stroke: #cd614f;
+}
+
+#container {
+    width: 50%;
+    height: calc(100% - 50px);
+    float: left;
+    overflow: auto;
+    background-image: url(bg.gif);
+}
+
+#menu {
+    height: 50px;
+    width: 100%;
+    clear: both;
+    background-color: #262e46;
+    background-image: url(pattern.png);
+}
+
+#menu h2, #hint {
+    margin: 0;
+    margin-left: 5px;
+    padding: 0;
+    line-height: 50px;
+    float: left;
+    height: 50px;
+    color: #c9c8c9;
+    font-size: 25px;
+}
+
+#menu #hint {
+    font-size: 15px;
+    margin-left: 15px;
+}
+
+#view-btn {
+    float: right;
+    line-height: 40px;
+    padding: 0 15px;
+    margin: 5px 10px;
+    display: inline-block;
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+    text-decoration: none;
+    color: #c9c8c9;
+    opacity: 0.6;
+    transition: opacity .3s;
+}
+
+#view-btn:hover {
+    opacity: 1;
+}
+
+/* 控制 */
+#width-control, #height-control {
+    height: 50px;
+    float: right;
+    line-height: 50px;
+    color: #c9c8c9;
+    margin-right: 10px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#width-value, #height-value {
+    position: relative;
+    top: -1px;
+}
+
+.left-arrow, .right-arrow {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity .3s;
+}
+
+.left-arrow {
+    border-width: 8px 18px 8px 0;
+    border-color: transparent #c9c8c9 transparent transparent;
+}
+
+.right-arrow {
+    border-width: 8px 0 8px 18px;
+    border-color: transparent transparent transparent #c9c8c9;
+}
+
+.left-arrow:hover, .right-arrow:hover {
+    opacity: 1;
+}
